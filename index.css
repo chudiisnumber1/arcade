@@ -1,0 +1,65 @@
+body {
+  margin: 0;
+}
+
+.Game {
+  width: 100vw;
+  height: 100vh;
+  display: grid; /*https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout */
+  justify-content: center;
+  align-content: center;
+  justify-items: center;
+  align-items: center;
+  grid-template-columns: repeat(
+    /*https://webdesign.tutsplus.com/tutorials/css-grid-layout-quick-start-guide--cms-27238 */
+      3,
+    auto
+  );
+}
+
+.box {
+  display: flex;
+  width: 270px;
+  height: 270px;
+  border: thin solid black;
+  justify-content: center;
+  align-items: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 10vmax;
+}
+
+.box:first-child,
+.box:nth-child(2),
+.box:nth-child(3) {
+  border-top: none;
+}
+
+.box:nth-child(3n + 1) {
+  border-left: none;
+}
+
+.box:nth-child(3n + 3) {
+  border-right: none;
+}
+.box:last-child,
+.box:nth-child(7),
+.box:nth-child(8) {
+  border-bottom: none;
+}
+
+.winner {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  justify-content: center;
+  align-items: center;
+  font-size: 8vmax;
+  flex-direction: column;
+}
+
+.winner button {
+  font-size: 1vmax;
+}
