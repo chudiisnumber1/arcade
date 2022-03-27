@@ -1,23 +1,34 @@
-const stuff = document.getElementsByID('boxes')
-const playerX = 'X'
-const playerO = 'O'
-let turn
+let turn = "X";
+const stuff = document.querySelectorAll("[boxes]");
+const mark = document.getElementById(turn);
 
+stuff.forEach((cell) => {
+  cell.addEventListener("click", clicked, { once: true });
+});
 
-for(let i=0; i < stuff.length; i++) {
-    box.addEventListener('click', clicked)
+begin();
+
+function begin() {
+  stuff.forEach((cell) => {
+    cell.addEventListener("click", clicked, { once: true });
+  });
 }
 
-function clicked(x) {
-    display: playerX
+function clicked(e) {
+  const cell = e.target;
+  const currentTurn = turn ? "X" : "O";
+  marked(cell, currentTurn);
+
+  console.log("Clicked");
+  changeTurn();
 }
 
+function marked(cell, turn) {
+  var marker = document.createElement("img");
+  marker.src = "./" + turn + ".jpg";
+  cell.appendChild(marker);
+}
 
-
-// html and css should be fine i think
-// Need to set up turn calculations
-// need to fix event listener
-// ask alleyn if he can help me figure out how to set up my js
-// need to make sure one player cant overwrite another
-// I dont know how to display a button at the end of the game. maybe some kind of event listener that fires when a winning function is ran
-//
+function changeTurn() {
+  turn = !turn;
+}

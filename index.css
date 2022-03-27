@@ -63,3 +63,13 @@ body {
 .winner button {
   font-size: 1vmax;
 }
+
+.winner.message {
+  display: flex;
+}
+
+.images {
+  display: none;
+  width: 20px;
+  height: 20px;
+}

@@ -1,0 +1,23 @@
+{
+  "name": "arcade",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chudiisnumber1/arcade.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/chudiisnumber1/arcade/issues"
+  },
+  "homepage": "https://github.com/chudiisnumber1/arcade#readme",
+  "dependencies": {
+    "react": "^17.0.2"
+  }
+}
