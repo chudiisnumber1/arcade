@@ -5,16 +5,12 @@ body {
 .Game {
   width: 100vw;
   height: 100vh;
-  display: grid; /*https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout */
+  display: grid;
   justify-content: center;
   align-content: center;
   justify-items: center;
   align-items: center;
-  grid-template-columns: repeat(
-    /*https://webdesign.tutsplus.com/tutorials/css-grid-layout-quick-start-guide--cms-27238 */
-      3,
-    auto
-  );
+  grid-template-columns: repeat(3, auto);
 }
 
 .box {
@@ -72,4 +68,16 @@ body {
   display: none;
   width: 20px;
   height: 20px;
+}
+
+# button {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  justify-content: center;
+  align-items: center;
+  font-size: 8vmax;
+  flex-direction: column;
 }
