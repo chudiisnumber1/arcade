@@ -3,8 +3,11 @@ body {
 }
 
 .Game {
-  width: 100vw;
-  height: 100vh;
+  position: fixed;
+  top: 100px;
+  right: 200px;
+  width: 80vw;
+  height: 80vh;
   display: grid;
   justify-content: center;
   align-content: center;
