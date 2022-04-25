@@ -84,3 +84,9 @@ body {
   font-size: 8vmax;
   flex-direction: column;
 }
+
+button {
+  display: block;
+  width: auto;
+  text-align: center;
+}

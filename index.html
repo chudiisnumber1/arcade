@@ -7,16 +7,35 @@
     <link rel="stylesheet" href="index.css" />
     <script src="index.js" defer></script>
     <title>Arcade</title>
+    <script>
+      function RenamedOne() {
+        const One = document.getElementById("playerOne").value;
+        // const Two = document.getElementById("playerTwo").value;
+        document.getElementById("result").textContent = One;
+        event.preventDefault();
+      }
+      function RenamedTwo() {
+        const Two = document.getElementById("playerTwo").value;
+        // const Two = document.getElementById("playerTwo").value;
+        document.getElementById("results").textContent = Two;
+        event.preventDefault();
+      }
+    </script>
   </head>
   <body>
     <div>
       <form id="players">
-        <label>Player One</label>
-        <input type="text" id="playerOne" name="playerOne" />
-        <br />
-        <label>Player Two</label>
-        <input type="text" id="playerTwo" name="playerTwo" />
-        <input type="submit" value="Submit" />
+        <input type="text" id="playerOne" placeholder="Player One" />
+
+        <button onclick="RenamedOne()">Submit</button>
+        <span id="result">Player X: </span>
+      </form>
+      <br />
+      <form id="players">
+        <input type="text" id="playerTwo" placeholder="Player Two" />
+
+        <button onclick="RenamedTwo()">Submit</button>
+        <span id="results">Player O: </span>
       </form>
     </div>
     <div class="Game X" id="Game">

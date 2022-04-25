@@ -74,9 +74,7 @@ function checkWin() {
 }
 
 function begin() {
-  // stuff.forEach((cell) => {
-  //   cell.addEventListener("click", clicked, { once: true });
-  // });
+  // if(playerNames){
   document
     .getElementById("0")
     .addEventListener("click", clicked, { once: true });
@@ -104,6 +102,10 @@ function begin() {
   document
     .getElementById("8")
     .addEventListener("click", clicked, { once: true });
+  // } else {
+  //   getNames();
+  //   begin();
+  // }
 }
 
 function clicked(e) {
@@ -122,7 +124,6 @@ function marked(cell, turn) {
   var marker = document.createElement("img");
   marker.src = "./" + turn + ".jpg";
   cell.appendChild(marker);
-  console.log("here is the new puzzle", newPuz);
 }
 
 function changeTurn() {
@@ -161,8 +162,8 @@ function drawGame() {
 
 function endGame() {
   stuff.forEach((cell) => {
-    // cell.removeEventListener("click", clicked, { once: true });
-    console.log(cell);
+    cell.removeEventListener("click", clicked, { once: true });
+    console.log("1");
   });
 
   document.getElementById("0").removeAttribute("click");
@@ -200,14 +201,17 @@ function endGame() {
     document.getElementById(7).innerHTML = "";
     document.getElementById(8).innerHTML = "";
     document.getElementById("again").remove();
+    begin();
   };
-  begin();
 }
 
-function playerNames() {
-  const names = document.getElementById("playerOne");
-  console.log(names);
-}
+// function playerNames() {
+//   let One = document.getElementById("playerOne").value;
+//   let Two = document.getElementById("playerTwo").value;
+//   document.getElementById("result").textContent = One;
+//   document.getElementById("result").textContent = Two;
+//   console.log(Two, One);
+// }
 
-playerNames();
+// playerNames();
 begin();
